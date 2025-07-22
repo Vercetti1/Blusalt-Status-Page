@@ -2,7 +2,7 @@ import { useState } from "react";
 import logoImg4 from "../assets/icons/icons8-checkmark-24.png";
 import logoImg5 from "../assets/icons/icons8-warning-50.png";
 import logoImg6 from "../assets/icons/icons8-warning-50 (1).png";
-import logoImg7 from '../assets/icons/icons8-sort-down-30.png';
+import logoImg7 from '../assets/icons/icons8-sort-down-30.png'
 
 function Status() {
   const [showDropdown, setShowDropdown] = useState(false);
