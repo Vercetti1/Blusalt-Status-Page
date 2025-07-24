@@ -100,19 +100,68 @@ html{
 
 }
 
-/* .box-2{
+.box-2-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -0.5rem;
+}
+
+.box-2 {
   background-color: rgb(247, 247, 184);
-  text-decoration: none;
-  color: black;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-} */
+  cursor: pointer;
+  padding-left: 7px;
+  width: 100%;
+}
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(247, 247, 184);
+  border-radius: 0 0 4px 4px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  margin-top: -0.6rem;
+}
+
+.dropdown-content.show {
+  opacity: 1;
+  max-height: 500px;
+  pointer-events: auto;
+}
+
+.dropdown-item {
+  padding: 10px 0 0 10px;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+  color: #444;
+}
+
+
 
 .box-3{
   background-color: rgb(250, 176, 176);
   padding-left: 7px;
 
+}
+
+.issues-detected-menu{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.sub-item{
+  padding-right: 1.2rem;
+}
+
+.sub-item-icon{
+  width: 15px;
+  height: 15px;
 }
 
 .drop-down{
@@ -191,6 +240,15 @@ html{
   background-color: #24be6f;
 }
 
+.status-indi{
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: rgb(241, 177, 0);
+  display: inline-block;
+  margin: 0 0.3rem 0.1rem 0.3rem;
+}
+
 .status-issue-detected .status-indicator{
   width: 5px;
   height: 5px;
@@ -205,43 +263,3 @@ html{
   background-color: #ec2822;
 }
 
-.box-2-wrapper {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: -0.5rem;
-}
-
-.box-2 {
-  background-color: rgb(247, 247, 184);
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-  padding-left: 7px;
-  width: 100%;
-  gap: -10px;
-}
-
-.dropdown-content {
-  display: flex;
-  flex-direction: column;
-  border-left: 1px solid #fcb72c;
-  border-radius: 0 0 4px 4px;
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  pointer-events: none;
-  transition: opacity 0.3s ease, max-height 0.3s ease;
-}
-
-.dropdown-content.show {
-  opacity: 1;
-  max-height: 500px;
-  pointer-events: auto;
-}
-
-.dropdown-item {
-  padding: 10px 0 0 10px;
-  font-size: 14px;
-  border-bottom: 1px solid #eee;
-  color: #444;
-}
